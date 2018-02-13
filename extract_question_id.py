@@ -59,7 +59,8 @@ qids = []
 train = []
 k = 0	
 x = 0
-####each para will have same question number?
+####each para will have same question number? Nope
+qno = 0;
 num_calls = 0
 for index in range(len(whip)):
 	paras = whip[index]['paragraphs']
@@ -68,15 +69,20 @@ for index in range(len(whip)):
 		
 		####### 61 ke baad 70#########
 
-		if x < 71:
-			continue;
-		if x >= 89:
-			break
+		if x <= 61:
+			folder = "qid/"
+		elif x>=71 and x <=88:
+			folder = "qid3/"
+		else:
+			break;
+			# break;
+			# continue;
+		# if x >= 89:
+		# 	break
 			# continue;
 
 		c = para['context']
 		c = c.split('.')
-		qno = 0;
 		qids = []
 		for q in para['qas']:
 			qno += 1
@@ -84,12 +90,12 @@ for index in range(len(whip)):
 				if statement != "":	
 					qids.append(qno)
 
-		print "for para: ", c,"qid: ",qids
-		f = open("qid3/"+str(x)+".csv","w")
+		# print "for para: ", c,"qid: ",qids
+		f = open(folder+str(x)+".csv","w")
 		final = ""
 		for i in qids:
 			final += str(i) + "\n";
-		print "final is", final
+		# print "final is", final
 		f.write(final)
 		print "done writing for", x
 print num_calls
