@@ -55,9 +55,11 @@ print whip[0]['paragraphs'][0]
 paras = whip[0]['paragraphs']
 train_x = []
 train_y = []
+qids = []
 train = []
 k = 0	
 x = 0
+####each para will have same question number?
 num_calls = 0
 for index in range(len(whip)):
 	paras = whip[index]['paragraphs']
@@ -66,36 +68,28 @@ for index in range(len(whip)):
 		
 		####### 61 ke baad 70#########
 
-		# if x < 70:
-		# 	continue
-		train_x = []
-		train_y = []
+		if x < 71:
+			continue;
+		if x >= 89:
+			break
+			# continue;
+
 		c = para['context']
 		c = c.split('.')
-		# print c
+		qno = 0;
+		qids = []
 		for q in para['qas']:
-			for ci in c:
-				if ci != "":
-					num_calls += 1
-					# train.append([q['question'],ci,q['answers'][0]['text']])
-					############### isko comment karke ek file bana jisme question ids ho bas##############
-					feat = extract_features(q['question'],ci)
-					if q['answers'][0]['text'] in ci:
-						train_x.append(feat)
-						train_y.append(1)
-					else:
-						train_x.append(feat)
-						train_y.append(0)
-					# print "done for",k,q['question'],ci,q['answers'][0]['text']
-					k+=1
-			# break
-		f = open("features3/"+str(x)+".csv","w")
+			qno += 1
+			for statement in c:
+				if statement != "":	
+					qids.append(qno)
+
+		print "for para: ", c,"qid: ",qids
+		f = open("qid3/"+str(x)+".csv","w")
 		final = ""
-		for i in range(len(train_x)):
-			for j in train_x[i]:
-				final +=  str(j)+","
-			final += str(train_y[i])+"\n"
-		print final
+		for i in qids:
+			final += str(i) + "\n";
+		print "final is", final
 		f.write(final)
-		print "done writing for ",x
+		print "done writing for", x
 print num_calls
