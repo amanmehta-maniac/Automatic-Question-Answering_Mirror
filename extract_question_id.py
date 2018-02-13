@@ -61,6 +61,7 @@ k = 0
 x = 0
 ####each para will have same question number? Nope
 qno = 0;
+folder = "qid3/"
 num_calls = 0
 for index in range(len(whip)):
 	paras = whip[index]['paragraphs']
@@ -71,15 +72,13 @@ for index in range(len(whip)):
 
 		if x <= 61:
 			folder = "qid/"
-		elif x>=71 and x <=88:
+		elif x >= 71 and x <= 88:
 			folder = "qid3/"
 		else:
-			break;
-			# break;
-			# continue;
-		# if x >= 89:
-		# 	break
-			# continue;
+			if x <= 88:
+				continue;
+			else:
+				break;
 
 		c = para['context']
 		c = c.split('.')
