@@ -37,6 +37,12 @@ This code requires a chapter number and a question as first two arguments. Also 
 # 	chapNum = chapNum - 8
 # print chapNum, iORj
 
+query = "Describe steps taken and worldwide reaction prior to introduction of the Euro on January 1, 1999."
+candidate1 = "The Frankfurt-based body said in its annual study released today that it has decided on two themes for the new currency: history of Euopean civilization and abstract or concrete paintings."
+candidate2 = "Despite skepticism about the actual realization of a single European currency as scheduled on January 1, 1999, preparation for the design of the Euro note have already begun."
+
+
+
 def extract_sentences(chapNum):
 	# sentences = []
 	# os.chdir("/home/shraddhan/Honors/DUC Dataset/DUC2006_Summarization_Documents/duc2006_docs/D0601A")
@@ -54,20 +60,21 @@ def extract_sentences(chapNum):
 	# 				if text[i] and not text[i].isspace():
 	# 					sentences.append(text[i])
 	# return sentences
-	classIdentifier = ""
-	if chapNum <= 8:
-		classIdentifier = "i"
-	else:
-		chapNum = chapNum - 8
-		classIdentifier = "j"
-	file = open("./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt")
-	print "./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt"
-	sentences = file.read()
-	file.close()
-	sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', sentences)
-	for i, s in enumerate(sentences):
-		s = s.replace("\n", " ")
-		sentences[i] = s
+	# classIdentifier = ""
+	# if chapNum <= 8:
+	# 	classIdentifier = "i"
+	# else:
+	# 	chapNum = chapNum - 8
+	# 	classIdentifier = "j"
+	# file = open("./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt")
+	# print "./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt"
+	sentences.append(candidate1)
+	sentences.append(candidate2)
+	# file.close()
+	# sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', sentences)
+	# for i, s in enumerate(sentences):
+	# 	s = s.replace("\n", " ")
+	# 	sentences[i] = s
 	return sentences
 
 # def extract_sentences_anurag(query):
@@ -136,13 +143,14 @@ def extract_features(candidate):
 
 
 chapNum = int(sys.argv[1])
-query = sys.argv[2]
+
 #print chapNum, query
 candidates = extract_sentences(chapNum)
 #print len(candidates)
 
 pool = mp.Pool(processes=12)
 features = pool.map(extract_features, candidates)
+
 
 features = [(x[0], x[1], unicode(x[2], "utf-8")) for x in features]
 weights = [3.0000000000000013, 6.999999999999991, 6.799999999999992, 0.1, 0.2, 0.1, 1.6000000000000003, 1.0999999999999999, 33.90000000000021, 0.30000000000000004]
