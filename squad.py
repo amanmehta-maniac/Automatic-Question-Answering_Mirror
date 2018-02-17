@@ -114,7 +114,7 @@ print( "\nPredicting with XGBoost ...")
 
 # chapNum = 4 
 # query = "What are the main reasons for rapid disappearance of forests."
-chapNum = sys.argv[1]
+chapNum = (int)(sys.argv[1])
 query = sys.argv[2]
 
 print chapNum, query

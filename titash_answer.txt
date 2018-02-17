@@ -1,0 +1,51 @@
+Model directory: /home/aman/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+8 Why is Titash Ekti Nadir Naam Titash Ekti Nadir Naam? Titash Titash
+258
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 2: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 1: ordinal not in range(128)
+Error during conversion
+stdout: {}
+stderr: {}
+Invalid PTB tree: ''
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+<type 'numpy.ndarray'> <class 'pandas.core.series.Series'>
+
+Why is Titash Ekti Nadir Naam Titash Ekti Nadir Naam? Titash Titash
+['Sans culottes literally meant those \xe2\x80\x98without knee breeches\xe2\x80\x99.', 'Soon trousers became a vital part of Western women\xe2\x80\x99s clothing, giving them greater freedom of movement.', 'The colours of France \xe2\x80\x93 blue, white and red \xe2\x80\x93 became popular as they were a sign of the patriotic citizen.', 'Thus the chapkan (a long buttoned coat) was considered the most suitable dress for men.', 'When European traders first began frequenting India, they were distinguished from the Indian \xe2\x80\x98turban wearers\xe2\x80\x99 as the \xe2\x80\x98hat wearers.\xe2\x80\x99 These two headgears not only looked different, they also signified different things.', 'When he was asked by journalists whether he was wearing enough clothes to go before the King, he joked that that \xe2\x80\x98the King had enough on for both of us\xe2\x80\x99!  Not All could Wear Khadi  Mahatma Gandhi\xe2\x80\x99s dream was to clothe the whole nation in khadi.', 'Women\xe2\x80\x99s magazines described how tight dresses and corsets caused deformities and illness among young girls.', 'about radical changes in women\xe2\x80\x99s clothing.', 'On both sides of the Atlantic, there was now a movement for rational dress reform.', 'Clothing: A Social History  It is easy to forget that there is a history to the clothes we wear.', 'Let us retrace our steps a few centuries to see what these changes were.', 'To be seen as attractive, to be womanly, they had to wear the corset.', 'The torture and pain this inflicted on the body was to be accepted as normal.', 'There were others who were convinced that western culture would lead to a loss of traditional cultural identity.', 'One: there was the problem of dirt and filth.', 'There were a million weavers in Bengal alone in the middle of the eighteenth century.']
+

@@ -1,0 +1,15 @@
+Model directory: /home/aman/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+1 Describe the circumstances leading to the outbreak of revolutionary protest in France
+295
+<type 'numpy.ndarray'> <class 'pandas.core.series.Series'>
+
+Describe the circumstances leading to the outbreak of revolutionary protest in France
+['Most people were protesting against the high price of bread.', 'The revolutionary governments took it upon themselves to pass laws that would translate the ideals of liberty and equality into everyday practice.', 'The Marseillaise is now the national anthem of France.', ' Conclusion  In 1804, Napoleon Bonaparte crowned himself Emperor of France.', 'Long years of war had drained the financial resources of France.', 'To qualify as an elector and then as a member of the Assembly, a man had to belong to the highest bracket of taxpayers.', ' While the National Assembly was busy at Versailles drafting a constitution, the rest of France seethed with turmoil.', 'When the king rejected this proposal, members of the third estate walked out of the assembly in protest.', 'They all described and discussed the events and changes taking place in France.', 'Rulers of other neighbouring countries too were worried by the developments in France and made plans to send troops to put down the events that had been taking place there since the summer of 1789.', 'Newspapers, pamphlets, books and printed pictures flooded the towns of France from where they travelled rapidly into the countryside.', 'The term Old Regime is usually used to describe the society and institutions of France before 1789.', 'Tipu Sultan and Rammohan Roy are two examples of individuals who responded to the ideas coming from revolutionary France.', ' Throughout the eighteenth century there was little criticism of slavery in France.', 'This led to a subsistence crisis, something that occurred frequently in France during the Old Regime.', 'Much later, when historians looked back upon this time, they saw it as the beginning of a chain of events that ultimately led to the execution of the king in France, though most people at the time did not anticipate this outcome.']
+
