@@ -140,12 +140,12 @@ print type(xgb_pred1),type(y_test)
         # c += 1
 
 
-sorted_sents = [x for _,x in sorted(zip(xgb_pred1,sents))]
+sorted_sents = [x for _,x in sorted(zip(xgb_pred1,sents),reverse=True)]
 # print sorted_sents
 # print xgb_pred1
 print
 print query
-print sorted_sents[-16:]
+print sorted_sents[:16]
 print
 
 ########## Test code for SQuAD ################
