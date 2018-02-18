@@ -23,6 +23,7 @@ for i, s in enumerate(sentences):
 
 
 
+
 ###pos tagging #####
 # POS = nltk.pos_tag(nltk.word_tokenize(sentences[0]))
 # print sentences[0]
