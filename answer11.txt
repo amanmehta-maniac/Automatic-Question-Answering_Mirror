@@ -1,0 +1,21 @@
+Model directory: /home/aashay/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+4 what are the main reasons for rapid disappearance of forests?
+234
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Error during conversion
+stdout: {}
+stderr: {}
+Invalid PTB tree: ''
+<type 'numpy.ndarray'> <class 'pandas.core.series.Series'>
+
+what are the main reasons for rapid disappearance of forests?
+['The government has recognised that in order to meet this goal, the people who live near the forests must be involved.', 'When a forest was burnt, there was the added danger of the flames spreading and burning valuable timber.', 'When the Dutch began to gain control over the forests in the eighteenth century, they tried to make the Kalangs work under them.', 'Oak forests in England were disappearing hence this created a problem of timber supply for the Royal Navy.', 'Some villages were allowed to stay on in the reserved forests on the condition that they worked free for the forest department in cutting and transporting trees, and protecting the forest from fires.', 'People were now forced to steal wood from the forests, and if they were caught, they were at the mercy of the forest guards who would take bribes from them.', ' Sleepers on the Tracks  By the early nineteenth century, oak forests in England were disappearing.', 'In the colonial period, cultivation expanded rapidly for a variety of reasons.', 'Initially certain areas of forests were reserved for hunting.', 'The initiative was taken by the Dhurwas of the Kanger forest, where reservation first took place.', 'These areas were enclosed and cleared of forests, and planted with tea or coffee.', ' In shifting cultivation, parts of the forest are cut and burnt in rotation.', ' As in India, the need to manage forests for shipbuilding and railways led to the introduction of a forest service.', 'The British were worried that the use of forests by local people and the reckless felling of trees by traders would destroy forests.', 'Such plots are cultivated for a couple of years and then left fallow for 12 to 18 years for the forest to grow back.', ' The disappearance of forests is referred to as deforestation.']
+

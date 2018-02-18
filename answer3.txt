@@ -1,0 +1,172 @@
+Model directory: /home/aashay/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+2 What was the impact of industrialisation on Tsarist Russia
+391
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 4: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+Error during conversion
+stdout: {det(police-3, The-1)
+amod(police-3, secret-2)
+root(ROOT-0, police-3)
+dep(police-3, called-4)
+det(Cheka-6, the-5)
+ccomp(punished-15, Cheka-6)
+advmod(Cheka-6, first-7)
+punct(punished-15, ,-8)
+cc(punished-15, and-9)
+amod(OGPU-11, later-10)
+conj(punished-15, OGPU-11)
+cc(OGPU-11, and-12)
+conj(OGPU-11, NKVD-13)
+punct(OGPU-11, -RRB--14)
+ccomp(called-4, punished-15)
+dobj(punished-15, those-16)
+nsubj(criticised-18, who-17)
+acl:relcl(those-16, criticised-18)
+det(Bolsheviks-20, the-19)
+dobj(criticised-18, Bolsheviks-20)
+punct(called-4, .-21)
+
+}
+stderr: {}
+
+Bad exit code from Stanford CoreNLP
+Error during conversion
+stdout: {}
+stderr: {}
+Invalid PTB tree: ''
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 4: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Error during conversion
+stdout: {nsubj(remember-3, We-1)
+aux(remember-3, should-2)
+root(ROOT-0, remember-3)
+mark(time-7, that-4)
+case(time-7, at-5)
+det(time-7, this-6)
+dep(remember-3, time-7)
+amod(states-9, European-8)
+nsubj(discriminated-11, states-9)
+advmod(discriminated-11, usually-10)
+acl:relcl(time-7, discriminated-11)
+case(favour-13, in-12)
+nmod(discriminated-11, favour-13)
+case(religion-16, of-14)
+nummod(religion-16, one-15)
+nmod(favour-13, religion-16)
+cc(religion-16, or-17)
+conj(religion-16, another-18)
+nsubj(favoured-20, Britain-19)
+punct(religion-16, favoured-20)
+det(Church-22, the-21)
+nsubj(favoured-29, Church-22)
+case(England-24, of-23)
+nmod(Church-22, England-24)
+punct(England-24, ,-25)
+conj(England-24, Austria-26)
+cc(England-24, and-27)
+conj(England-24, Spain-28)
+ccomp(favoured-20, favoured-29)
+det(Church-32, the-30)
+compound(Church-32, Catholic-31)
+dobj(favoured-29, Church-32)
+punct(time-7, -RRB--33)
+punct(remember-3, .-34)
+
+}
+stderr: {}
+
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+list index out of range
+list index out of range
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Error during conversion
+stdout: {det(police-3, The-1)
+amod(police-3, secret-2)
+root(ROOT-0, police-3)
+dep(police-3, called-4)
+det(Cheka-6, the-5)
+ccomp(punished-15, Cheka-6)
+advmod(Cheka-6, first-7)
+punct(punished-15, ,-8)
+cc(punished-15, and-9)
+amod(OGPU-11, later-10)
+conj(punished-15, OGPU-11)
+cc(OGPU-11, and-12)
+conj(OGPU-11, NKVD-13)
+punct(OGPU-11, -RRB--14)
+ccomp(called-4, punished-15)
+dobj(punished-15, those-16)
+nsubj(criticised-18, who-17)
+acl:relcl(those-16, criticised-18)
+det(Bolsheviks-20, the-19)
+dobj(criticised-18, Bolsheviks-20)
+punct(called-4, .-21)
+
+}
+stderr: {}
+
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 9: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 9: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 6: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 8: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 4: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+'ascii' codec can't decode byte 0xe2 in position 7: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Bad exit code from Stanford CoreNLP
+<type 'numpy.ndarray'> <class 'pandas.core.series.Series'>
+
+What was the impact of industrialisation on Tsarist Russia
+[' In April 1917, the Bolshevik leader Vladimir Lenin returned to Russia from his exile.', 'Industrial equipment disintegrated more rapidly in Russia than elsewhere in Europe.', ' The war also had a severe impact on industry.', 'To answer these questions, let us look at Russia a few years before the revolution.', ' In Russia, the war was initially popular and people rallied around Tsar Nicholas II.', 'By 1927- 1928, the towns in Soviet Russia were facing an acute problem of grain supplies.', 'Socialists took over the government in Russia through the October Revolution of 1917.', 'They banned the use of the old titles of aristocracy.', 'What would be the basis of socialist society?', ' Yet by the 1950s it was acknowledged within the country that the style of government in the USSR was not in keeping with the ideals of the Russian Revolution.', ' Socialism in Russia  All political parties were illegal in Russia before 1914.', 'What were the social and political conditions in Russia when the revolution occurred?', 'In Russia, peasants wanted the land of the nobles to be given to them.', 'Liberals in Russia campaigned to end this state of affairs.', 'So peasants, not workers, would be the main force of the revolution, and Russia could become socialist more quickly than other countries.', ' Most industry was the private property of industrialists.']
+
