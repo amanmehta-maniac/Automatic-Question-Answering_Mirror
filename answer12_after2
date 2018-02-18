@@ -1,0 +1,22 @@
+Model directory: /home/aashay/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+5 Explain about the warriors of the Maasai society
+250
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+<type 'numpy.ndarray'> <class 'pandas.core.series.Series'>
+Explain about the warriors of the Maasai society
+The warriors consisted of younger people, mainly responsible for the protection of the tribe.  To administer the affairs of the Maasai, the British introduced a series of measures that had important implications. They appointed chiefs of different sub-groups of Maasai, who were made responsible for the affairs of the tribe.  As the area of grazing lands shrank, the adverse effect of the droughts increased in intensity. When pasturelands in one place was closed to them, they changed the direction of their movement, reduced the size of the herd, combined pastoral activity with other forms of income and adapted to the changes in the modern world.  The loss of the finest grazing lands and water resources created pressure on the small area of land that the Maasai were confined within. Unlike the mountain pastoralists, it was not the cold and the snow that defined the seasonal rhythms of their movement: rather it was the alternation of the monsoon and dry season. The frequent bad years led to a steady decline of the animal stock of the pastoralists. In just two years of severe drought, 1933 and 1934, over half the cattle in the Maasai Reserve died. The Dhangar shepherds stayed in the central plateau of Maharashtra during the monsoon. The number of cattle heads he had and the amount of tax he paid was entered on the pass.  The social changes in Maasai society occurred at two levels.  One of the problems the Maasais have faced is the continuous loss of their grazing lands. With the onset of the monsoon the Dhangars left the Konkan and the coastal areas with their flocks and returned to their settlements on the dry plateau. After 1947, the camel and sheep herding Raikas, for instance, could no longer move into Sindh and graze their camels on the banks of the Indus, as they had done earlier. After a march of about a month they reached the Konkan.  In a different area of the mountains, the Gaddi shepherds of Himachal Pradesh had a similar cycle of seasonal movement. The elders formed the ruling group and met in periodic councils to decide on the affairs of the community and settle disputes. In winter, when the high mountains were covered with snow, they lived with their herds in the low hills of the Siwalik range. With the onset of summer, the snow melted and the mountainsides were lush green. They, however, were subject to the authority of the elders.  But from the colonial period, the Maasai were bound down to a fixed area, confined within a reserve, and prohibited from moving in search of pastures. They too spent their winter in the low hills of Siwalik range, grazing their flocks in scrub forests.  Like pastoralists in India, the lives of African pastoralists have changed dramatically over the colonial and post-colonial periods.  But the life history of the poor pastoralists who depended only on their livestock was different.

@@ -74,6 +74,10 @@ print len(words),len(gen),len(p_indxs)
 for ind, i in enumerate(p_indxs):
 	# print "1",gen[ind]
 	# print "2",words[i]
-	words[i] = gen[ind]
+	if gen[ind]!="!!!":
+		words[i] = gen[ind]
+	print words[i]
 print 
-print words
+final_out = " ".join(map(str, words))
+f = open("./Dataset_NCERT/Dataset-txt/"+"map_"+classIdentifier+"ess30"+str(chapNum)+".txt","w")
+f.write(final_out)

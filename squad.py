@@ -44,20 +44,24 @@ def extract_features(candidate):
         feature_vector = [0,0,0,0,0,0,0,0,0,0,candidate]
     return feature_vector
 
-def extract_sentences(chapNum):
+def extract_sentences(chapNum,flag):
     classIdentifier = ""
     if chapNum <= 8:
         classIdentifier = "i"
     else:
         chapNum = chapNum - 8
         classIdentifier = "j"
-    file = open("./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt")
+    if flag==1:
+        file = open("./Dataset_NCERT/Dataset-txt/"+classIdentifier+"ess30"+str(chapNum)+".txt")
+    else:
+        file = open("./Dataset_NCERT/Dataset-txt/"+"map_"+classIdentifier+"ess30"+str(chapNum)+".txt")    
     sentences = file.read()
     file.close()
     sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', sentences)
     for i, s in enumerate(sentences):
         s = s.replace("\n", " ")
         sentences[i] = s
+    print sentences
     return sentences
 
 
@@ -118,7 +122,8 @@ chapNum = (int)(sys.argv[1])
 query = sys.argv[2]
 
 print chapNum, query
-candidates = extract_sentences(chapNum)
+candidates2 = extract_sentences(chapNum,1)
+candidates = extract_sentences(chapNum,2)
 # candidates = ['abc','disappearance']
 print len(candidates)
 
@@ -143,10 +148,30 @@ print type(xgb_pred1),type(y_test)
 sorted_sents = [x for _,x in sorted(zip(xgb_pred1,sents),reverse=True)]
 # print sorted_sents
 # print xgb_pred1
-print
+output = []
 print query
-print sorted_sents[:16]
-print
+final = sorted_sents
+x=0
+f = open("maasai.txt","w")
+s=""
+for i in final:
+    s += i + " "
+f.write(s)
+f.close()
+for i in final:
+    ind = candidates.index(i)
+    if x>25:
+        break
+    x+=1
+    output.append(candidates2[ind])
+
+for ind,i in enumerate(final):
+    if "They defended" in i:
+        print ind,i
+
+print " ".join(map(str, output))
+
+
 
 ########## Test code for SQuAD ################
 # c=0
