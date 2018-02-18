@@ -4,7 +4,7 @@ P = ["He", "he", "Him", "him", "She", "she", "Her","her", "It", "it", "They", "t
 R = ["Himself", "himself", "Herself", "herself","Itself", "itself", "Themselves", "themselves"]
 
 def read_words(words_file):
-    return [word for line in open(words_file, 'r') for word in line.split()]
+    return [word for line in open(words_file, 'r') for word in line.split(" ")]
 
 p_indxs = []
 r_indxs = []
@@ -40,11 +40,12 @@ for i,line in enumerate(lines):
 		abhi_tak += lines[ind] + ". "
 	w_line = line.split(" ") 
 	for p in P:
-		if p in w_line:
-			spans.append(abhi_tak)
-			pros.append(p)
+		for word in w_line:
+			if word==p:
+				spans.append(abhi_tak)
+				pros.append(p)
 	start = max(start,i-5);
-print spans
+print len(spans)
 
 for ind,i in enumerate(spans):
 	f = open("spans/"+str(ind)+".txt","w")
