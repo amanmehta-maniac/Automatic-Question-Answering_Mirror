@@ -61,7 +61,7 @@ def extract_sentences(chapNum,flag):
     for i, s in enumerate(sentences):
         s = s.replace("\n", " ")
         sentences[i] = s
-    print sentences
+    # print sentences
     return sentences
 
 
@@ -124,8 +124,9 @@ query = sys.argv[2]
 print chapNum, query
 candidates2 = extract_sentences(chapNum,1)
 candidates = extract_sentences(chapNum,1)
+print "This is prev: "
 # candidates = ['abc','disappearance']
-print len(candidates)
+# print len(candidates)
 
 pool = mp.Pool(processes=8)
 features = pool.map(extract_features, candidates)
@@ -138,7 +139,7 @@ dtest = xgb.DMatrix(x_test)
 
 xgb_pred1 = model.predict(dtest)
 
-print type(xgb_pred1),type(y_test)
+# print type(xgb_pred1),type(y_test)
 # for i in range(len(xgb_pred1)):
 #   # if xgb_pred1[i] != y_test[i]:
 #   print xgb_pred1[i],y_test[i]
@@ -152,12 +153,12 @@ output = []
 print query
 final = sorted_sents
 x=0
-f = open("maasai.txt","w")
-s=""
-for i in final:
-    s += i + " "
-f.write(s)
-f.close()
+# f = open("maasai.txt","w")
+# s=""
+# for i in final:
+#     s += i + " "
+# f.write(s)
+# f.close()
 for i in final:
     ind = candidates.index(i)
     if x>25:
@@ -165,9 +166,9 @@ for i in final:
     x+=1
     output.append(candidates2[ind])
 
-for ind,i in enumerate(final):
-    if "They defended" in i:
-        print ind,i
+# for ind,i in enumerate(final):
+#     if "They defended" in i:
+#         print ind,i
 
 print " ".join(map(str, output))
 
