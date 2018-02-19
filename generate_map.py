@@ -63,7 +63,7 @@ for indx,word in enumerate(words):
 
 print p_indxs,r_indxs
 
-f = open("1.out","r")
+f = open("ch1.out","r")
 lines = f.readlines()
 gen = []
 for line in lines:

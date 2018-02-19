@@ -1,0 +1,25 @@
+Model directory: /home/aman/.local/share/bllipparser/WSJ-PTB3
+Model directory already exists, not reinstalling
+(3323, 10) (3323,) (713, 10) (713,)
+num_boost_rounds=150
+
+Training XGBoost ...
+
+Predicting with XGBoost ...
+5 Explain the warriors
+This is prev: 
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Error during conversion
+stdout: {}
+stderr: {}
+Invalid PTB tree: ''
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 5: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+'ascii' codec can't decode byte 0xe2 in position 0: ordinal not in range(128)
+Explain the warriors
+First, the traditional difference based on age, between the elders and warriors, was disturbed, though it did not break down entirely. The warriors consisted of younger people, mainly responsible for the protection of the tribe. White settlers and European colonists saw pastoralists as dangerous and savage – people with whom all contact had to be minimised. Through these Acts some forests which produced commercially valuable timber like deodar or sal were declared ‘Reserved’. They combined a range of different activities – cultivation, trade, and herding – to make their living. Other forests were classified as ‘Protected’. One group of Raikas – known as the Maru (desert) Raikas – herded camels and another group reared sheep and goat. It was seen as ‘waste land’ that needed to be brought under cultivation. In pre-colonial times Maasai society was divided into two social categories – elders and warriors.  Pastoralism in Africa  Let us move to Africa where over half the world’s pastoral population lives.  Further to the east, in Garhwal and Kumaon, the Gujjar cattle herders came down to the dry forests of the bhabar in the winter, and went up to the high meadows – the bugyals – in summer.   Young men came to be recognised as members of the warrior class when they proved their manliness by raiding the cattle of other pastoral groups and participating in wars. Consequently, the traditional authority of both elders and warriors was adversely affected. These contractors tried to extract as high a tax as they could to recover the money they had paid to the state and earn as much profit as they could within the year.  First, the colonial state wanted to transform all grazing lands into cultivated farms.  Where have the Grazing Lands Gone? So the Raikas combined cultivation with pastoralism. Feeding the cattle became a persistent problem. They defended the community and organised cattle raids.  How Did these Changes Affect the Lives of Pastoralists?  How Did the Pastoralists Cope with these Changes?  These Forest Acts changed the lives of pastoralists.  In the deserts of Rajasthan lived the Raikas. Pastoralists are not relics of the past. When pasturelands in one place was closed to them, they changed the direction of their movement, reduced the size of the herd, combined pastoral activity with other forms of income and adapted to the changes in the modern world.
