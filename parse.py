@@ -48,9 +48,9 @@ for i,line in enumerate(lines):
 print len(spans)
 
 for ind,i in enumerate(spans):
-	f = open("spans/"+str(ind)+".txt","w")
+	f = open("spans1/"+str(ind)+".txt","w")
 	f.write(i)
-	f = open("pros/"+str(ind)+".txt","w")
+	f = open("pros1/"+str(ind)+".txt","w")
 	f.write(pros[ind])
 
 

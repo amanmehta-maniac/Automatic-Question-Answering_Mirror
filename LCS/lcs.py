@@ -54,7 +54,7 @@ def lcs(a, b):
     # row 0 and column 0 are initialized to 0 already
     for i, x in enumerate(a):
         for j, y in enumerate(b):
-            if x == y:
+            if x.lower() == y.lower():
                 lengths[i+1][j+1] = lengths[i][j] + 1
             else:
                 lengths[i+1][j+1] = max(lengths[i+1][j], lengths[i][j+1])
@@ -78,7 +78,7 @@ def wlcs(a, b):
     # row 0 and column 0 are initialized to 0 already
     for i, x in enumerate(a):
         for j, y in enumerate(b):
-            if x == y:
+            if x.lower() == y.lower():
                 #print x,y
                 lengths[i+1][j+1] = lengths[i][j] + 1
             # else:
