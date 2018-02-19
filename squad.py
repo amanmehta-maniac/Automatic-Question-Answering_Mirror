@@ -123,7 +123,7 @@ query = sys.argv[2]
 
 print chapNum, query
 candidates2 = extract_sentences(chapNum,1)
-candidates = extract_sentences(chapNum,2)
+candidates = extract_sentences(chapNum,1)
 # candidates = ['abc','disappearance']
 print len(candidates)
 
