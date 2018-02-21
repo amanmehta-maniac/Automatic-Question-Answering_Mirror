@@ -10,6 +10,7 @@ import re
 import pickle
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
+import pandas as pd
 	
 from lxml import etree
 from lcs import lcs_wlcs #returns lcs, wlcs
@@ -23,11 +24,10 @@ import multiprocessing as mp
 from nltk.corpus import wordnet as wn
 from nltk.tokenize import sent_tokenize, word_tokenize
 
-def extract_features(query,candidate):
+def extract_features(inp):
+	qid,query,candidate = inp
+	print "doing for ",qid,query,candidate
 	feature_vector = []
-	# global i
-	# i += 1
-	#print "finding features for", i
 	try:
 		feature_vector += list(lcs_wlcs(query, candidate))
 		feature_vector += list(head_related(query, candidate))
@@ -38,71 +38,56 @@ def extract_features(query,candidate):
 	except Exception as e:
 		print e
 		feature_vector = [0,0,0,0,0,0,0,0,0,0]
-	return feature_vector
+	return [qid]+feature_vector+[query]+[candidate]
+
+
+# pool = mp.Pool(processes=12)
+# features = pool.map(extract_features, candidates)
 
 s = open('train-v1.1.json', 'r').read()
 whip = eval(s)
 
 whip = whip["data"]
-print type(whip)
-# for k in whip:
-# 	break
-# print type(whip[0])
-# for k in whip[0]:
-# 	print k
-#print whip[0]['paragraphs'][0]
-# print whip[0]['title']
+print len(whip)
 paras = whip[0]['paragraphs']
-train_x = []
-train_y = []
-train = []
-k = 0	
-x = 0
-num_calls = 0
-qid=0
-write_str = ""
-for index in range(len(whip)):
-	paras = whip[index]['paragraphs']
-	for para in paras:
-		x += 1 
-		
-		####### 61 ke baad 70#########
 
-		# if x < 70:
-		# 	continue
+def give_QApairs(qid,a):
+	ret = []
+	# for index in range(a,b):
+	paras = whip[a]['paragraphs']
+	for para in paras:
+		# x += 1 
 		train_x = []
 		train_y = []
 		c = para['context']
 		c = c.split('.')
-		# print c
 		for q in para['qas']:
 			qid+=1 
 			for ci in c:
 				if ci != "":
-					num_calls += 1
-					# train.append([q['question'],ci,q['answers'][0]['text']])
-					############### isko comment karke ek file bana jisme question ids ho bas##############
-					#feat = extract_features(q['question'],ci)
+					# num_calls += 1
 					feat_final = [qid]+[q['question'],ci]
-					write_str += str(qid)+",'"+q['question']+"','"+ci+"'\n"
-					#if q['answers'][0]['text'] in ci:
-					#	train_x.append(feat_final)
-					#	train_y.append(1)
-					#else:
-					#	train_x.append(feat_final)
-					#	train_y.append(0)
-					# print "done for",k,q['question'],ci,q['answers'][0]['text']
-					k+=1
+					ret.append([qid,q['question'],ci])
+					# k+=1
+				# break
 			# break
-		#f = open("features/"+str(x)+".csv","w")
-		f = open("question_list.csv","w")
-		final = ""
-		for i in range(len(train_x)):
-			for j in train_x[i]:
-				final +=  str(j)+","
-			final += str(train_y[i])+"\n"
-		print final
-		f.write(write_str)
-		print "done writing for ",x
-		break
-print num_calls
+		# break
+		# print "done writing for ",x
+	return qid,ret
+
+
+l = len(whip)
+y = 0
+qid = 0
+
+while y<l:
+	qid,list_QA = give_QApairs(qid,y)
+	print "got ",len(list_QA)," QA pairs"
+	# print list_QA
+	pool = mp.Pool(processes=1)
+	features = pool.map(extract_features,  list_QA)
+	print features
+	write_karo = "\n".join(["\t".join(map(str,i)) for i in features])
+	f = open("squad_features/"+str(y)+".csv","w")
+	f.write(write_karo)
+	y+=1 
