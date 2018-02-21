@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 import xgboost as xgb
 import sys
-sys.path.append('./LCS')
-sys.path.append('./headRelated')
-sys.path.append('./ngramOverlap')
-sys.path.append('./skipBigram')
-sys.path.append('./synHypOverlap')
-sys.path.append('./treeKernel')
+sys.path.append('./Features/LCS')
+sys.path.append('./Features/headRelated')
+sys.path.append('./Features/ngramOverlap')
+sys.path.append('./Features/skipBigram')
+sys.path.append('./Features/synHypOverlap')
+sys.path.append('./Features/treeKernel')
 import os
 import re
 import pickle
