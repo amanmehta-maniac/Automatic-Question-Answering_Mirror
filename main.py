@@ -1,10 +1,12 @@
 from keras.layers import Input, Dense
 import keras.backend as K
 from keras.models import Model
-from loader import iter2
+from loader import iter2, extract_sentences
 import gensim
 import json
 import numpy as np
+import re
+from scipy import spatial
 
 
 def cosine(a,b):
@@ -41,7 +43,7 @@ q,a = iter2()
 # print "behenchod ", len(a), len(a[0][0])
 # print q[0],a[0]
 autoencoder.compile(optimizer='adadelta', loss='MAE')
-autoencoder.fit(q[:1737],q[:1737], batch_size=32, epochs=2,validation_data=(q[1737:], q[1737:]))
+autoencoder.fit(q[:1737],q[:1737], batch_size=32, epochs=20,validation_data=(q[1737:], q[1737:]))
 
 # encoding_dim = 32  # 32 floats -> compression of factor 24.5, assuming the input is 784 floats
 
@@ -66,7 +68,7 @@ decoder2 = Model(encoded_input2, decoder_layer2(encoded_input2))
 # q,a = iter2()
 # print q[0],a[0]
 autoencoder2.compile(optimizer='adadelta', loss='MAE')
-autoencoder2.fit(a[:1737],a[:1737], batch_size=32, epochs=2,validation_data=(a[1737:], a[1737:]))
+autoencoder2.fit(a[:1737],a[:1737], batch_size=32, epochs=20,validation_data=(a[1737:], a[1737:]))
 
 
 i = Input(shape=(None,encoding_dim))
@@ -105,7 +107,7 @@ y_v = intermediate_layer_model.predict(a[1737:])
 # print "yahaL: ", len(a[0])
 
 f.compile(optimizer='adadelta', loss='MAE')
-f.fit(x,y,batch_size=32,epochs=2,validation_data=(x_v,y_v))
+f.fit(x,y,batch_size=32,epochs=20,validation_data=(x_v,y_v))
 
 
 with open('qa_pair_squad.json', 'r') as file1:
@@ -121,7 +123,7 @@ stop.append(" ")
 
 while(1):
 	q = raw_input("question: ").strip().split()
-	chap = raw_input()
+	chap = int(raw_input())
 	avg = 0
 	cnt = 0
 	for w in q:
@@ -142,24 +144,26 @@ while(1):
 
 	print avg, type(avg), "wahaL: ", len(avg)
 
-	intermediate_layer_model = Model(inputs=autoencoder.input,
-	                                 outputs=autoencoder.get_layer('layer1').output)
-	mid1 = intermediate_layer_model.predict(np.array([[avg]]))
+	mid1 = encoder.predict(np.array([[avg]]))
 	print "mid1 done!"
 	mid2 = f.predict(mid1)
 	print "mid2 done!"
-	intermediate_layer_model2 = Model(outputs=autoencoder2.output,
-	                                 inputs=autoencoder2.get_layer('layer3').input)
-	final = intermediate_layer_model2.predict(mid2)
+	# temp = [mid2[0][0][i] for i in range(len(mid2))]
+	# temp = np.asarray(temp)
+	# print "array humra type hai: ", type(temp)
+	# print type(mid2[0][0]), mid2[0][0].shape, 
+	# y mid2[0][0].transpose().shape
+	final = decoder2.predict(np.array([mid2[0][0]]))
 
 	# for i in 
 	Sent = extract_sentences(chap,1)
 	print "extraction done!"
 	savg = 0
 	cnt = 0
+	thresh = 0
 	ret = []
 	for s in Sent:
-		for w in s.strip().split():
+		for w in s:
 			w = w.lower()
 			if w in stop:
 				continue
@@ -177,12 +181,13 @@ while(1):
 		savg.tolist()
 	# for s in Sent:
 
-		sim = cosine(final, avg2)
+		sim = cosine(final.tolist(), savg)
+		# print s, "dist: ", sim 
 		if sim > thresh:
 			ret.append([" ".join(s),sim])
 	print "sim done!"
 	ret.sort(key=lambda x: x[1])
-	print " ".join([i[0] for i in ret[-10:]])
+	print " ".join([i[0] for i in ret[-20:]])
 		# print "yaha pohoch gaya mai:", len(sim)
 		# print len(sim),type(sim)
 	# if sim > thresh:
