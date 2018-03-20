@@ -69,9 +69,9 @@ def give_QApairs(qid,a):
 					feat_final = [qid]+[q['question'],ci]
 					ret.append([qid,q['question'],ci])
 					# k+=1
-				# break
-			# break
-		# break
+				break
+			break
+		break
 		# print "done writing for ",x
 	return qid,ret
 
@@ -90,4 +90,5 @@ while y<l:
 	write_karo = "\n".join(["\t".join(map(str,i)) for i in features])
 	f = open("squad_features/"+str(y)+".csv","w")
 	f.write(write_karo)
+	f.close()
 	y+=1 
