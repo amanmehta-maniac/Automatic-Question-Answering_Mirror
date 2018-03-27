@@ -4,7 +4,13 @@ import re
 import pickle
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
-	
+sys.path.append('./Features/LCS')
+sys.path.append('./Features/headRelated')
+sys.path.append('./Features/ngramOverlap')
+sys.path.append('./Features/skipBigram')
+sys.path.append('./Features/synHypOverlap')
+sys.path.append('./Features/treeKernel')
+
 from lxml import etree
 from lcs import lcs_wlcs #returns lcs, wlcs
 from head import head_related #returns relHeadScore, exactHeadScore
@@ -62,7 +68,7 @@ for para in all_para:
 	# all_sent.append(sentences)
 
 
-model = gensim.models.Word2Vec(all_sent, min_count=1)
+model = gensim.models.Word2Vec(all_sent, min_count=1,size = 20)
 model.save("word2vec")
 
 
@@ -71,7 +77,7 @@ model.save("word2vec")
 
 # with open('qa_pair_squad.json', 'w') as f:
 # 	json.dump(Final, f)
-with open('qa_pair_squad.json', 'w') as f:
-	json.dump(Final, f)
+# with open('qa_pair_squad.json', 'w') as f:
+# 	json.dump(Final, f)
 
 
